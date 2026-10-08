@@ -1,5 +1,12 @@
 # 🍕 Pizza Sales Analysis Dashboard
+  
+  [![📊 Excel Analysis](https://img.shields.io/badge/📊%20Excel%20Analysis-View%20Workbook-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](./pizza_sales_analysis.xlsx)
+[![🗄️ SQL Queries](https://img.shields.io/badge/🗄️%20SQL%20Queries-View%20Queries-4479A1?style=for-the-badge&logo=sql&logoColor=white)](./pizza_sales_kpi_queries.sql)
 
+[![📈 Analytics](https://img.shields.io/badge/📈%20Analytics-Insights-EDE7F6?style=for-the-badge&labelColor=D1C4E9)](#-analytics)
+[![💼 Business Intelligence](https://img.shields.io/badge/💼%20Business%20Intelligence-KPIs-FFF3E0?style=for-the-badge&labelColor=FFE0B2)](#-business-intelligence)
+[![📊 Dashboard](https://img.shields.io/badge/📊%20Dashboard-View-BBDEFB?style=for-the-badge&labelColor=90CAF9)](#-dashboard)
+  
 ## 📌 Project Overview
 
 This project analyzes pizza sales data using **SQL** and **Microsoft Excel** to uncover key business insights related to revenue, customer purchasing behavior, product performance, and sales trends.
@@ -117,6 +124,40 @@ The SQL queries were used to calculate and analyze: SQL_Querries for KPI's .sql.
 - Top 5 Worst-Selling Pizzas
 
 ---
+
+**🧮 Sample SQL Analysis**
+
+**Total Revenue:**
+
+SELECT SUM(total_price) AS Total_Revenue
+FROM pizza_sales;
+
+**Total Orders:**
+
+SELECT COUNT(DISTINCT order_id) AS Total_Orders
+FROM pizza_sales;
+
+**Average Pizza per Order:**
+
+SELECT
+    CAST(
+        CAST(SUM(quantity) AS DECIMAL(10,2)) /
+        CAST(COUNT(DISTINCT order_id) AS DECIMAL(10,2))
+        AS DECIMAL(10,2)
+    ) AS Avg_Pizzas_per_Order
+FROM pizza_sales;
+
+**Top 5 Best-Selling Pizzas:**
+
+SELECT TOP 5
+    pizza_name,
+    SUM(quantity) AS Total_Quantity_Sold
+FROM pizza_sales
+GROUP BY pizza_name
+ORDER BY Total_Quantity_Sold DESC;
+
+---
+
 ## 💡 Business Recommendations
 
 - Increase staffing levels during Friday and weekend rush periods.
