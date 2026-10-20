@@ -203,12 +203,11 @@ Thank you to Data Tutorials for supporting the data analytics community and help
 Successfully transformed raw pizza sales transaction data into an interactive dashboard that highlights business performance, customer trends, product insights, and revenue opportunities for data-driven decision-making. pizza_sales_Analysis .xlsx
 
 ---
+**👩‍💻 About:**
 
-## **👩‍💻 Author**
+**Aspiring Data Analyst | Excel | SQL | Power BI | Python**
 
-### Aishwarya Jayant Dixit
-
-Aspiring Data Analyst passionate about transforming raw data into meaningful business insights through analytics and visualization.
+I am building practical analytics projects to strengthen my skills in querying data, analysing business questions, and communicating findings. This project showcases my use of SQL joins, aggregation, subqueries, and window functions in a sales-analysis scenario.
 
 ---
 
